@@ -1,0 +1,66 @@
+[
+  {
+    "id": "john-smith-abc123",
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "uniqueUrl": "john-smith-abc123",
+    "plusOne": true,
+    "maxGuests": 2
+  },
+  {
+    "id": "sarah-johnson-def456",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@email.com",
+    "uniqueUrl": "sarah-johnson-def456",
+    "plusOne": false,
+    "maxGuests": 1
+  },
+  {
+    "id": "michael-davis-ghi789",
+    "name": "Michael Davis",
+    "email": "michael.davis@email.com",
+    "uniqueUrl": "michael-davis-ghi789",
+    "plusOne": true,
+    "maxGuests": 2
+  },
+  {
+    "id": "emily-wilson-jkl012",
+    "name": "Emily Wilson",
+    "email": "emily.wilson@email.com",
+    "uniqueUrl": "emily-wilson-jkl012",
+    "plusOne": false,
+    "maxGuests": 1
+  },
+  {
+    "id": "robert-brown-mno345",
+    "name": "Robert Brown",
+    "email": "robert.brown@email.com",
+    "uniqueUrl": "robert-brown-mno345",
+    "plusOne": true,
+    "maxGuests": 4
+  },
+  {
+    "id": "lisa-garcia-pqr678",
+    "name": "Lisa Garcia",
+    "email": "lisa.garcia@email.com",
+    "uniqueUrl": "lisa-garcia-pqr678",
+    "plusOne": true,
+    "maxGuests": 3
+  },
+  {
+    "id": "david-martinez-stu901",
+    "name": "David Martinez",
+    "email": "david.martinez@email.com",
+    "uniqueUrl": "david-martinez-stu901",
+    "plusOne": false,
+    "maxGuests": 1
+  },
+  {
+    "id": "jennifer-anderson-vwx234",
+    "name": "Jennifer Anderson",
+    "email": "jennifer.anderson@email.com",
+    "uniqueUrl": "jennifer-anderson-vwx234",
+    "plusOne": true,
+    "maxGuests": 2
+  }
+]
