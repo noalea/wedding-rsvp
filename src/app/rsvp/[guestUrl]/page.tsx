@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { Guest } from "@/types";
+import { Guest, MealChoice } from "@/types";
 import { getGuestByUrl, getWeddingDetails } from "@/utils/guests";
 import RSVPForm from "@/components/RSVPForm";
 
@@ -24,7 +24,14 @@ export default function GuestRSVPPage() {
     }
   }, [guestUrl]);
 
-  const handleRSVPSubmit = async (rsvpData: any) => {
+  const handleRSVPSubmit = async (rsvpData: {
+    guestId: string;
+    guestName: string;
+    attending: boolean;
+    numberOfGuests: number;
+    mealChoices: MealChoice[];
+    specialRequests?: string;
+  }) => {
     setIsSubmitting(true);
     setError(null);
 
@@ -60,8 +67,8 @@ export default function GuestRSVPPage() {
             Guest Not Found
           </h1>
           <p className="text-gray-600">
-            Sorry, we couldn't find an invitation with this link. Please check
-            your invitation for the correct URL.
+            Sorry, we couldn&apos;t find an invitation with this link. Please
+            check your invitation for the correct URL.
           </p>
         </div>
       </div>
@@ -75,7 +82,7 @@ export default function GuestRSVPPage() {
           <div className="text-6xl mb-4">🎉</div>
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Thank You!</h1>
           <p className="text-lg text-gray-600 mb-6">
-            Your RSVP has been successfully submitted. We can't wait to
+            Your RSVP has been successfully submitted. We can&apos;t wait to
             celebrate with you!
           </p>
           <div className="text-sm text-gray-500">
@@ -138,8 +145,8 @@ export default function GuestRSVPPage() {
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             We are so excited to celebrate our special day with you! Your
-            presence would mean the world to us. Please let us know if you'll be
-            able to join us by filling out the RSVP form below.
+            presence would mean the world to us. Please let us know if
+            you&apos;ll be able to join us by filling out the RSVP form below.
           </p>
         </div>
 

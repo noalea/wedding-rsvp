@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     try {
       const data = await fs.readFile(responsesPath, "utf8");
       existingResponses = JSON.parse(data);
-    } catch (error) {
+    } catch {
       // File doesn't exist or is empty, start with empty array
       existingResponses = [];
     }
@@ -66,7 +66,7 @@ export async function GET() {
     const responses = JSON.parse(data);
 
     return NextResponse.json(responses);
-  } catch (error) {
+  } catch {
     return NextResponse.json([]);
   }
 }

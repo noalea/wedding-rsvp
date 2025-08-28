@@ -28,9 +28,9 @@ export default function Home() {
             Welcome to Our Wedding!
           </h2>
           <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
-            We're so excited to celebrate our special day with our loved ones.
-            If you received a personal invitation, please use the unique link
-            provided to RSVP.
+            We&apos;re so excited to celebrate our special day with our loved
+            ones. If you received a personal invitation, please use the unique
+            link provided to RSVP.
           </p>
 
           {/* Wedding Details */}

@@ -5,7 +5,14 @@ import { Guest, MealChoice } from "@/types";
 
 interface RSVPFormProps {
   guest: Guest;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: {
+    guestId: string;
+    guestName: string;
+    attending: boolean;
+    numberOfGuests: number;
+    mealChoices: MealChoice[];
+    specialRequests?: string;
+  }) => void;
   isSubmitting: boolean;
 }
 
@@ -99,7 +106,7 @@ export default function RSVPForm({
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
-              Yes, I'll be there! ✨
+              Yes, I&apos;ll be there! ✨
             </button>
             <button
               type="button"
@@ -110,7 +117,7 @@ export default function RSVPForm({
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
-              Sorry, can't make it 💔
+              Sorry, can&apos;t make it 💔
             </button>
           </div>
         </div>
