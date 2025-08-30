@@ -50,10 +50,7 @@ export default function Home() {
                 {weddingDetails.venue.name}
               </p>
               <p className="text-gray-600">{weddingDetails.venue.address}</p>
-              <p className="text-gray-600">
-                {weddingDetails.venue.city}, {weddingDetails.venue.state}{" "}
-                {weddingDetails.venue.zipCode}
-              </p>
+              <p className="text-gray-600">{weddingDetails.venue.city}</p>
             </div>
           </div>
         </div>
