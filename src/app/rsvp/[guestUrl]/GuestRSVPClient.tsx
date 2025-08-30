@@ -98,6 +98,9 @@ export default function GuestRSVPClient({
               </h3>
               <p className="text-gray-600">{weddingDetails.date}</p>
               <p className="text-gray-600">{weddingDetails.time}</p>
+              <p className="text-gray-600">
+                Ceremony starts {weddingDetails.ceremonyTime} SHARP
+              </p>
             </div>
             <div className="text-center">
               <h3 className="text-lg font-semibold text-gray-700 mb-2">
@@ -107,10 +110,7 @@ export default function GuestRSVPClient({
                 {weddingDetails.venue.name}
               </p>
               <p className="text-gray-600">{weddingDetails.venue.address}</p>
-              <p className="text-gray-600">
-                {weddingDetails.venue.city}, {weddingDetails.venue.state}{" "}
-                {weddingDetails.venue.zipCode}
-              </p>
+              <p className="text-gray-600">{weddingDetails.venue.city}</p>
             </div>
           </div>
         </div>

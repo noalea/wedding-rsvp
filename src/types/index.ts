@@ -28,11 +28,10 @@ export interface WeddingDetails {
   groomName: string;
   date: string;
   time: string;
+  ceremonyTime: string;
   venue: {
     name: string;
     address: string;
     city: string;
-    state: string;
-    zipCode: string;
   };
 }

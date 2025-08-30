@@ -26,16 +26,15 @@ export function getGuestByUrl(uniqueUrl: string): Guest | null {
 
 export function getWeddingDetails(): WeddingDetails {
   return {
-    brideName: "Sarah",
-    groomName: "Michael",
-    date: "Saturday, June 15th, 2024",
-    time: "4:00 PM",
+    brideName: process.env.BRIDE_NAME ?? "",
+    groomName: process.env.GROOM_NAME ?? "",
+    date: process.env.DATE ?? "",
+    time: process.env.TIME ?? "",
+    ceremonyTime: process.env.CEREMONY_TIME ?? "",
     venue: {
-      name: "The Grand Ballroom",
-      address: "123 Elegant Avenue",
-      city: "San Francisco",
-      state: "CA",
-      zipCode: "94102",
+      name: process.env.VENUE_NAME ?? "",
+      address: process.env.VENUE_ADDRESS ?? "",
+      city: process.env.VENUE_CITY ?? "",
     },
   };
 }
