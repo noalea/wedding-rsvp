@@ -168,7 +168,7 @@ export default function RSVPForm({
                     {choice.guestNumber > 1 && (
                       <input
                         type="text"
-                        placeholder="Guest name (optional)"
+                        placeholder="Guest name"
                         value={choice.guestName || ""}
                         onChange={(e) =>
                           updateGuestName(choice.guestNumber, e.target.value)
