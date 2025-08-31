@@ -27,7 +27,7 @@ export default function Home() {
             <p className="text-stone-700 text-sm font-medium tracking-widest uppercase mt-4 mb-6">
               Wedding Invitation
             </p>
-            <h1 className="text-3xl font-serif text-stone-900 mb-6 leading-tight">
+            <h1 className="text-4xl  text-stone-900 mb-6 leading-tight">
               {weddingDetails.brideName}
               <span className="text-2xl text-stone-700 my-3 font-light">
                 &nbsp;&&nbsp;
@@ -66,7 +66,7 @@ export default function Home() {
                 <p className="hidden lg:block text-stone-700 text-sm font-medium tracking-widest uppercase mb-4">
                   Wedding Invitation
                 </p>
-                <h1 className="hidden lg:block text-3xl lg:text-5xl font-serif text-stone-900 mb-6 leading-tight">
+                <h1 className="hidden lg:block text-3xl lg:text-5xl  text-stone-900 mb-6 leading-tight">
                   {weddingDetails.brideName}
                   <span className="text-2xl lg:text-3xl text-stone-700 my-3 font-light">
                     &nbsp;&&nbsp;
@@ -93,7 +93,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 mb-12 border border-stone-300">
-          <h2 className="text-3xl font-serif text-stone-900 mb-6 text-center">
+          <h2 className="text-3xl  text-stone-900 mb-6 text-center">
             Welcome to Our Wedding
           </h2>
           <p className="text-lg text-stone-700 text-center mb-8 leading-relaxed">
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <div className="text-stone-600 text-2xl mb-3">📅</div>
-              <h3 className="text-lg font-serif text-stone-900 mb-2">When</h3>
+              <h3 className="text-lg  text-stone-900 mb-2">When</h3>
               <p className="text-stone-700 font-medium">
                 {weddingDetails.date}
               </p>
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="text-stone-600 text-2xl mb-3">📍</div>
-              <h3 className="text-lg font-serif text-stone-900 mb-2">Where</h3>
+              <h3 className="text-lg  text-stone-900 mb-2">Where</h3>
               <p className="text-stone-700 font-medium">
                 {weddingDetails.venue.name}
               </p>
@@ -126,7 +126,7 @@ export default function Home() {
 
         {/* Development/Demo Section */}
         <div className="bg-stone-100 border border-stone-300 rounded-2xl p-8">
-          <h3 className="text-2xl font-serif text-stone-900 mb-6 text-center">
+          <h3 className="text-2xl  text-stone-900 mb-6 text-center">
             Guest List
           </h3>
 
@@ -137,9 +137,7 @@ export default function Home() {
                 href={`/rsvp/${guest.uniqueUrl}`}
                 className="block bg-white p-4 rounded-xl border border-stone-300 hover:border-stone-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
               >
-                <span className="font-serif text-lg text-stone-900">
-                  {guest.name}
-                </span>
+                <span className=" text-lg text-stone-900">{guest.name}</span>
                 <span className="text-stone-700 text-sm ml-2">
                   (Max {guest.maxGuests} guests)
                 </span>

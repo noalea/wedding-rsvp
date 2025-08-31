@@ -93,7 +93,7 @@ export default function RSVPForm({
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Attendance Question */}
         <div>
-          <h3 className="text-2xl font-serif text-slate-800 mb-6 text-center">
+          <h3 className="text-2xl  text-slate-800 mb-6 text-center">
             Will you be attending our wedding?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -126,7 +126,7 @@ export default function RSVPForm({
         {attending === true && (
           <>
             <div className="bg-stone-50 rounded-xl p-6">
-              <h3 className="text-xl font-serif text-slate-800 mb-4 text-center">
+              <h3 className="text-xl  text-slate-800 mb-4 text-center">
                 How many guests will be attending?
               </h3>
               <p className="text-slate-700 mb-4 text-center">
@@ -151,7 +151,7 @@ export default function RSVPForm({
 
             {/* Meal Choices */}
             <div className="bg-stone-50 rounded-xl p-6">
-              <h3 className="text-xl font-serif text-slate-800 mb-6 text-center">
+              <h3 className="text-xl  text-slate-800 mb-6 text-center">
                 Meal Preferences
               </h3>
               <div className="space-y-6">
@@ -160,7 +160,7 @@ export default function RSVPForm({
                     key={choice.guestNumber}
                     className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm"
                   >
-                    <h4 className="font-serif text-lg text-slate-800 mb-4">
+                    <h4 className=" text-lg text-slate-800 mb-4">
                       Guest {choice.guestNumber}
                       {choice.guestNumber === 1 ? ` (${guest.name})` : ""}
                     </h4>
@@ -204,7 +204,7 @@ export default function RSVPForm({
 
             {/* Special Requests */}
             <div className="bg-stone-50 rounded-xl p-6">
-              <h3 className="text-xl font-serif text-slate-800 mb-4 text-center">
+              <h3 className="text-xl  text-slate-800 mb-4 text-center">
                 Special Dietary Requirements or Requests
               </h3>
               <textarea
@@ -223,7 +223,7 @@ export default function RSVPForm({
           <button
             type="submit"
             disabled={attending === null || isSubmitting}
-            className="bg-stone-800 text-white py-4 px-12 rounded-full font-serif text-lg hover:bg-stone-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="bg-stone-800 text-white py-4 px-12 rounded-full  text-lg hover:bg-stone-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             {isSubmitting ? "Sending..." : "Send RSVP"}
           </button>

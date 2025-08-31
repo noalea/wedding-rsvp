@@ -5,7 +5,6 @@ function calculateRSVPDate(weddingDateStr: string): string {
   try {
     // Parse the wedding date string (assuming format like "Saturday, October 26, 2024")
     const weddingDate = new Date(weddingDateStr);
-    console.log("Wedding date:", weddingDate);
 
     // Subtract 21 days (3 weeks)
     const rsvpDate = new Date(weddingDate);

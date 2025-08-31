@@ -58,9 +58,7 @@ export default function GuestRSVPClient({
         <div className="max-w-2xl mx-auto text-center">
           <div className="bg-white rounded-2xl shadow-2xl p-12 border border-stone-200">
             <div className="text-6xl mb-6">🌿</div>
-            <h1 className="text-4xl font-serif text-stone-900 mb-6">
-              Thank You!
-            </h1>
+            <h1 className="text-4xl  text-stone-900 mb-6">Thank You!</h1>
             <p className="text-lg text-stone-700 mb-8 leading-relaxed">
               Your RSVP has been received. We can&apos;t wait to celebrate this
               special day with you!
@@ -96,7 +94,7 @@ export default function GuestRSVPClient({
             <p className="text-stone-700 text-sm font-medium tracking-widest uppercase mt-4 mb-6">
               Wedding Invitation
             </p>
-            <h1 className="text-3xl font-serif text-stone-900 mb-6 leading-tight">
+            <h1 className="text-4xl  text-stone-900 mb-6 leading-tight">
               {weddingDetails.brideName}
               <span className="text-2xl text-stone-700 my-3 font-light">
                 &nbsp;&&nbsp;
@@ -136,7 +134,7 @@ export default function GuestRSVPClient({
                 <p className="hidden lg:block text-stone-700 text-sm font-medium tracking-widest uppercase mb-4">
                   Wedding Invitation
                 </p>
-                <h1 className="hidden lg:block text-3xl lg:text-5xl font-serif text-stone-900 mb-6 leading-tight">
+                <h1 className="hidden lg:block text-4xl lg:text-5xl text-stone-900 mb-6 leading-tight">
                   {weddingDetails.brideName}
                   <span className="text-2xl lg:text-3xl text-stone-700 my-3 font-light">
                     &nbsp;&&nbsp;
@@ -150,9 +148,7 @@ export default function GuestRSVPClient({
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-stone-600 text-2xl mb-2">📅</div>
-                    <h3 className="text-lg font-serif text-stone-900 mb-1">
-                      When
-                    </h3>
+                    <h3 className="text-lg text-stone-900 mb-1">When</h3>
                     <p className="text-stone-700 font-medium text-sm">
                       {weddingDetails.date}
                     </p>
@@ -167,9 +163,7 @@ export default function GuestRSVPClient({
                   </div>
                   <div className="text-center">
                     <div className="text-stone-600 text-2xl mb-2">📍</div>
-                    <h3 className="text-lg font-serif text-stone-900 mb-1">
-                      Where
-                    </h3>
+                    <h3 className="text-lg text-stone-900 mb-1">Where</h3>
                     <p className="text-stone-700 font-medium text-sm">
                       {weddingDetails.venue.name}
                     </p>
@@ -197,9 +191,7 @@ export default function GuestRSVPClient({
       {/* Personal Greeting Section */}
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="bg-white rounded-2xl shadow-lg p-8 border border-stone-300 text-center">
-          <h2 className="text-2xl font-serif text-stone-900 mb-6">
-            Dear {guest.name},
-          </h2>
+          <h2 className="text-2xl  text-stone-900 mb-6">Dear {guest.name},</h2>
           <p className="text-lg text-stone-700 leading-relaxed max-w-2xl mx-auto">
             We are so excited to celebrate our special day with you! Your
             presence would mean the world to us. Please let us know if
@@ -211,7 +203,7 @@ export default function GuestRSVPClient({
       {/* RSVP Section */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-serif text-stone-900 mb-4">RSVP</h2>
+          <h2 className="text-4xl  text-stone-900 mb-4">RSVP</h2>
           <p className="text-stone-700 text-lg">
             Kindly respond by {weddingDetails.rsvpDate}
           </p>
