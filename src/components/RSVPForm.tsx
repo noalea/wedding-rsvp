@@ -89,7 +89,7 @@ export default function RSVPForm({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 border border-stone-100">
+    <div className="bg-white shadow-xl p-8 border border-stone-100">
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Attendance Question */}
         <div>
