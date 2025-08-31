@@ -102,7 +102,7 @@ export default function RSVPForm({
               onClick={() => handleAttendingChange(true)}
               className={`px-8 py-4 rounded-full font-medium transition-all duration-300 border-2 ${
                 attending === true
-                  ? "bg-black text-white border-black shadow-lg"
+                  ? "bg-gradient-to-r from-rose-900 to-rose-800 text-white border-rose-800 shadow-lg"
                   : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
               }`}
             >
@@ -113,7 +113,7 @@ export default function RSVPForm({
               onClick={() => handleAttendingChange(false)}
               className={`px-8 py-4 rounded-full font-medium transition-all duration-300 border-2 ${
                 attending === false
-                  ? "bg-black text-white border-black shadow-lg"
+                  ? "bg-gradient-to-r from-rose-900 to-rose-800 text-white border-rose-800 shadow-lg"
                   : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
               }`}
             >
@@ -187,7 +187,7 @@ export default function RSVPForm({
                           }
                           className={`p-4 rounded-xl text-sm font-medium transition-all duration-300 border-2 ${
                             choice.meal === meal
-                              ? "bg-black text-white border-black shadow-lg"
+                              ? "bg-gradient-to-r from-rose-900 to-rose-800 text-white border-rose-800 shadow-lg"
                               : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
                           }`}
                         >
@@ -223,7 +223,7 @@ export default function RSVPForm({
           <button
             type="submit"
             disabled={attending === null || isSubmitting}
-            className="bg-stone-800 text-white py-4 px-12 rounded-full  text-lg hover:bg-stone-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="bg-gradient-to-r from-rose-900 to-rose-800 text-white py-4 px-12 rounded-full text-lg hover:from-stone-900 hover:to-rose-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             {isSubmitting ? "Sending..." : "Send RSVP"}
           </button>

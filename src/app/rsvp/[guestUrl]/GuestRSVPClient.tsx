@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Guest, MealChoice, WeddingDetails } from "@/types";
 import RSVPForm from "@/components/RSVPForm";
+import ElegantConfetti from "@/components/ElegantConfetti";
 
 interface GuestRSVPClientProps {
   guest: Guest;
@@ -63,7 +64,7 @@ export default function GuestRSVPClient({
               Your RSVP has been received. We can&apos;t wait to celebrate this
               special day with you!
             </p>
-            <div className="text-sm text-stone-600 italic">
+            <div className="text-sm text-rose-400 italic">
               If you need to make any changes, please contact us directly.
             </div>
           </div>
@@ -74,15 +75,52 @@ export default function GuestRSVPClient({
 
   return (
     <div className="min-h-screen bg-stone-100">
+      <ElegantConfetti />
       {/* Hero Section */}
       <div className="relative overflow-hidden">
+        {/* Elegant Floral Accents - Hero Section */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-16 right-16 text-rose-400 text-2xl opacity-60 animate-pulse">
+            🌸
+          </div>
+          <div
+            className="absolute bottom-32 left-20 text-rose-300 text-xl opacity-50 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          >
+            🌿
+          </div>
+          <div
+            className="absolute top-1/2 right-8 text-rose-400 text-lg opacity-40 animate-pulse"
+            style={{ animationDelay: "2s" }}
+          >
+            🌸
+          </div>
+          <div
+            className="absolute bottom-16 right-32 text-rose-300 text-sm opacity-60 animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          >
+            🌿
+          </div>
+          <div
+            className="absolute top-24 left-8 text-rose-300 text-lg opacity-40 animate-pulse"
+            style={{ animationDelay: "1.5s" }}
+          >
+            🌺
+          </div>
+          <div
+            className="absolute top-3/4 left-16 text-rose-400 text-sm opacity-50 animate-pulse"
+            style={{ animationDelay: "3s" }}
+          >
+            🌸
+          </div>
+        </div>
         <div className="relative max-w-7xl mx-auto py-8">
           {/* Mobile-only Wedding Invitation Header and Names */}
           <div className="lg:hidden text-center mb-8">
             <div className="flex items-center justify-center">
-              <div className="h-px bg-stone-400 w-16"></div>
-              <div className="mx-4 text-stone-600">❦</div>
-              <div className="h-px bg-stone-400 w-16"></div>
+              <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
+              <div className="mx-4 text-rose-400">❦</div>
+              <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
             </div>
             <p className="text-stone-700 text-sm font-medium tracking-widest uppercase mt-4 mb-6">
               Wedding Invitation
@@ -117,9 +155,9 @@ export default function GuestRSVPClient({
             <div className="text-center lg:text-left space-y-8 order-2 lg:order-2">
               {/* Ornamental Divider */}
               <div className="flex items-center justify-center lg:justify-start">
-                <div className="h-px bg-stone-400 w-16"></div>
-                <div className="mx-4 text-stone-600">❦</div>
-                <div className="h-px bg-stone-400 w-16"></div>
+                <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
+                <div className="mx-4 text-rose-400">❦</div>
+                <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
               </div>
 
               {/* Wedding Invitation Header */}
@@ -140,7 +178,7 @@ export default function GuestRSVPClient({
               <div className="bg-white/70 backdrop-blur-sm p-8 shadow-lg border border-stone-300">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="text-center mb-8">
-                    <div className="text-stone-600 text-2xl mb-2">📅</div>
+                    <div className="text-rose-400 text-2xl mb-2">📅</div>
                     <h3 className="text-lg text-stone-900 mb-1">When</h3>
                     <p className="text-stone-700 font-medium text-sm">
                       {weddingDetails.date}
@@ -155,7 +193,7 @@ export default function GuestRSVPClient({
                     )}
                   </div>
                   <div className="text-center">
-                    <div className="text-stone-600 text-2xl mb-2">📍</div>
+                    <div className="text-rose-400 text-2xl mb-2">📍</div>
                     <h3 className="text-lg text-stone-900 mb-1">Where</h3>
                     <p className="text-stone-700 font-medium text-sm">
                       {weddingDetails.venue.name}
@@ -172,9 +210,9 @@ export default function GuestRSVPClient({
 
               {/* Ornamental Divider */}
               <div className="flex items-center justify-center lg:justify-start">
-                <div className="h-px bg-stone-400 w-16"></div>
-                <div className="mx-4 text-stone-600">❦</div>
-                <div className="h-px bg-stone-400 w-16"></div>
+                <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
+                <div className="mx-4 text-rose-400">❦</div>
+                <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
               </div>
             </div>
           </div>
@@ -182,8 +220,36 @@ export default function GuestRSVPClient({
       </div>
 
       {/* Personal Greeting Section */}
-      <div className="max-w-4xl mx-auto py-6">
-        <div className="bg-white shadow-lg p-12 border border-stone-300 text-center">
+      <div className="relative max-w-4xl mx-auto py-6">
+        {/* Floral Accents around Greeting */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute top-4 left-8 text-rose-300 text-xl opacity-50 animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          >
+            🌸
+          </div>
+          <div
+            className="absolute top-12 right-12 text-rose-400 text-lg opacity-40 animate-pulse"
+            style={{ animationDelay: "2s" }}
+          >
+            🌿
+          </div>
+          <div
+            className="absolute bottom-8 left-16 text-rose-300 text-sm opacity-60 animate-pulse"
+            style={{ animationDelay: "1.5s" }}
+          >
+            🌺
+          </div>
+          <div
+            className="absolute bottom-4 right-8 text-rose-400 text-lg opacity-45 animate-pulse"
+            style={{ animationDelay: "3s" }}
+          >
+            🌸
+          </div>
+        </div>
+
+        <div className="relative bg-white shadow-lg p-12 border border-stone-300 text-center">
           <h2 className="text-2xl  text-stone-900 mb-6">Dear {guest.name},</h2>
           <p className="text-lg text-stone-700 leading-relaxed max-w-2xl mx-auto">
             We are so excited to celebrate our special day with you! Your
@@ -196,8 +262,42 @@ export default function GuestRSVPClient({
       </div>
 
       {/* RSVP Section */}
-      <div className="max-w-4xl mx-auto py-16">
-        <div className="text-center mb-12">
+      <div className="relative max-w-4xl mx-auto py-16">
+        {/* Floral Accents around RSVP */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute top-8 left-4 text-rose-400 text-2xl opacity-50 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          >
+            🌸
+          </div>
+          <div
+            className="absolute top-20 right-8 text-rose-300 text-lg opacity-45 animate-pulse"
+            style={{ animationDelay: "2.5s" }}
+          >
+            🌿
+          </div>
+          <div
+            className="absolute top-1/2 left-8 text-rose-400 text-sm opacity-40 animate-pulse"
+            style={{ animationDelay: "4s" }}
+          >
+            🌺
+          </div>
+          <div
+            className="absolute bottom-16 right-12 text-rose-300 text-xl opacity-55 animate-pulse"
+            style={{ animationDelay: "0.8s" }}
+          >
+            🌸
+          </div>
+          <div
+            className="absolute bottom-32 left-16 text-rose-400 text-lg opacity-40 animate-pulse"
+            style={{ animationDelay: "3.2s" }}
+          >
+            🌿
+          </div>
+        </div>
+
+        <div className="relative text-center mb-12">
           <h2 className="text-4xl  text-stone-900 mb-4">RSVP</h2>
           <p className="text-stone-700 text-lg">
             Kindly respond by <br />
@@ -221,12 +321,40 @@ export default function GuestRSVPClient({
       </div>
 
       {/* Footer */}
-      <div className="py-12">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="relative py-12">
+        {/* Floral Accents in Footer */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute top-4 left-12 text-rose-300 text-lg opacity-40 animate-pulse"
+            style={{ animationDelay: "1.2s" }}
+          >
+            🌸
+          </div>
+          <div
+            className="absolute top-8 right-16 text-rose-400 text-sm opacity-50 animate-pulse"
+            style={{ animationDelay: "2.8s" }}
+          >
+            🌿
+          </div>
+          <div
+            className="absolute bottom-4 left-20 text-rose-300 text-xl opacity-45 animate-pulse"
+            style={{ animationDelay: "0.6s" }}
+          >
+            🌺
+          </div>
+          <div
+            className="absolute bottom-8 right-8 text-rose-400 text-lg opacity-35 animate-pulse"
+            style={{ animationDelay: "3.5s" }}
+          >
+            🌸
+          </div>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center mb-6">
-            <div className="h-px bg-stone-400 w-20"></div>
-            <div className="mx-6 text-stone-600 text-2xl">❦</div>
-            <div className="h-px bg-stone-400 w-20"></div>
+            <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-20"></div>
+            <div className="mx-6 text-rose-400 text-2xl">❦</div>
+            <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-20"></div>
           </div>
           <p className="text-stone-700 italic">
             We can&apos;t wait to celebrate with you!

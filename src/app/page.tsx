@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllGuests, getWeddingDetails } from "@/utils/guests";
+import ElegantConfetti from "@/components/ElegantConfetti";
 
 export default function Home() {
   const guests = getAllGuests();
@@ -11,22 +12,41 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <ElegantConfetti />
       {/* Hero Header */}
       <div className="relative bg-stone-100 overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 border border-stone-400 rounded-full"></div>
-          <div className="absolute top-32 right-20 w-20 h-20 border border-stone-400 rounded-full"></div>
-          <div className="absolute bottom-20 right-1/4 w-16 h-16 border border-stone-400 rounded-full"></div>
+        {/* Elegant Floral Accents */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-16 right-16 text-rose-400 text-2xl opacity-60 animate-pulse">
+            🌸
+          </div>
+          <div
+            className="absolute bottom-32 left-20 text-rose-300 text-xl opacity-50 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          >
+            🌿
+          </div>
+          <div
+            className="absolute top-1/2 right-8 text-rose-400 text-lg opacity-40 animate-pulse"
+            style={{ animationDelay: "2s" }}
+          >
+            🌸
+          </div>
+          <div
+            className="absolute bottom-16 right-32 text-rose-300 text-sm opacity-60 animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          >
+            🌿
+          </div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-8">
           {/* Mobile-only Wedding Invitation Header and Names */}
           <div className="lg:hidden text-center mb-8">
             <div className="flex items-center justify-center">
-              <div className="h-px bg-stone-400 w-16"></div>
-              <div className="mx-4 text-stone-600">❦</div>
-              <div className="h-px bg-stone-400 w-16"></div>
+              <div className="h-px bg-gradient-to-r from-stone-400 to-rose-300 w-16"></div>
+              <div className="mx-4 text-rose-400">❦</div>
+              <div className="h-px bg-gradient-to-l from-stone-400 to-rose-300 w-16"></div>
             </div>
             <p className="text-stone-700 text-sm font-medium tracking-widest uppercase mt-4 mb-6">
               Wedding Invitation
