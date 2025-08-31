@@ -4,6 +4,10 @@ import { getAllGuests, getWeddingDetails } from "@/utils/guests";
 export default function Home() {
   const guests = getAllGuests();
   const weddingDetails = getWeddingDetails();
+  const totalGuestCount = guests.reduce(
+    (sum, guest) => sum + guest.maxGuests,
+    0
+  );
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -126,8 +130,8 @@ export default function Home() {
 
         {/* Development/Demo Section */}
         <div className="bg-stone-100 border border-stone-300 rounded-2xl p-8">
-          <h3 className="text-2xl  text-stone-900 mb-6 text-center">
-            Guest List
+          <h3 className="text-2xl text-stone-900 mb-6 text-center">
+            Guest List ({totalGuestCount})
           </h3>
 
           <div className="grid gap-4">
