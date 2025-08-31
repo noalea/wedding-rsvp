@@ -182,8 +182,8 @@ export default function GuestRSVPClient({
       </div>
 
       {/* Personal Greeting Section */}
-      <div className="max-w-4xl mx-auto py-12">
-        <div className="bg-white shadow-lg p-8 border border-stone-300 text-center">
+      <div className="max-w-4xl mx-auto py-6">
+        <div className="bg-white shadow-lg p-12 border border-stone-300 text-center">
           <h2 className="text-2xl  text-stone-900 mb-6">Dear {guest.name},</h2>
           <p className="text-lg text-stone-700 leading-relaxed max-w-2xl mx-auto">
             We are so excited to celebrate our special day with you! Your

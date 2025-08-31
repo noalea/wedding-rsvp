@@ -205,12 +205,12 @@ export default function RSVPForm({
             {/* Special Requests */}
             <div className="bg-stone-50 rounded-xl p-6">
               <h3 className="text-xl  text-slate-800 mb-4 text-center">
-                Special Dietary Requirements or Requests
+                Any Special Requests?
               </h3>
               <textarea
                 value={specialRequests}
                 onChange={(e) => setSpecialRequests(e.target.value)}
-                placeholder="Any allergies, dietary restrictions, or special requests..."
+                placeholder="Any allergies, dietary restrictions, song requests, etc."
                 className="w-full p-4 border-2 border-stone-200 rounded-xl focus:ring-2 focus:ring-stone-500 focus:border-stone-500 bg-white text-slate-800 resize-none"
                 rows={4}
               />
