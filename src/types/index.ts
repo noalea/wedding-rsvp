@@ -1,7 +1,7 @@
 export interface Guest {
   id: string;
   name: string;
-  email: string;
+  phoneNumber: string;
   uniqueUrl: string;
   plusOne: boolean;
   maxGuests: number;
