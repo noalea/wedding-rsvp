@@ -89,21 +89,21 @@ export default function RSVPForm({
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
-      <form onSubmit={handleSubmit} className="space-y-6">
+    <div className="bg-white rounded-2xl shadow-xl p-8 border border-stone-100">
+      <form onSubmit={handleSubmit} className="space-y-8">
         {/* Attendance Question */}
         <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">
+          <h3 className="text-2xl font-serif text-slate-800 mb-6 text-center">
             Will you be attending our wedding?
           </h3>
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               type="button"
               onClick={() => handleAttendingChange(true)}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+              className={`px-8 py-4 rounded-full font-medium transition-all duration-300 border-2 ${
                 attending === true
-                  ? "bg-green-600 text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  ? "bg-black text-white border-black shadow-lg"
+                  : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
               }`}
             >
               Yes, I&apos;ll be there! ✨
@@ -111,10 +111,10 @@ export default function RSVPForm({
             <button
               type="button"
               onClick={() => handleAttendingChange(false)}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+              className={`px-8 py-4 rounded-full font-medium transition-all duration-300 border-2 ${
                 attending === false
-                  ? "bg-red-600 text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  ? "bg-black text-white border-black shadow-lg"
+                  : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
               }`}
             >
               Sorry, can&apos;t make it 💔
@@ -125,11 +125,11 @@ export default function RSVPForm({
         {/* Guest Count - Only show if attending */}
         {attending === true && (
           <>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            <div className="bg-stone-50 rounded-xl p-6">
+              <h3 className="text-xl font-serif text-slate-800 mb-4 text-center">
                 How many guests will be attending?
               </h3>
-              <p className="text-gray-600 mb-3">
+              <p className="text-slate-700 mb-4 text-center">
                 Including yourself (maximum {guest.maxGuests} guests)
               </p>
               <select
@@ -137,7 +137,7 @@ export default function RSVPForm({
                 onChange={(e) =>
                   handleGuestCountChange(parseInt(e.target.value))
                 }
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                className="w-full p-4 border-2 border-stone-200 rounded-xl focus:ring-2 focus:ring-stone-500 focus:border-stone-500 bg-white text-slate-800 font-medium"
               >
                 {Array.from({ length: guest.maxGuests }, (_, i) => i + 1).map(
                   (num) => (
@@ -150,17 +150,17 @@ export default function RSVPForm({
             </div>
 
             {/* Meal Choices */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            <div className="bg-stone-50 rounded-xl p-6">
+              <h3 className="text-xl font-serif text-slate-800 mb-6 text-center">
                 Meal Preferences
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {mealChoices.map((choice) => (
                   <div
                     key={choice.guestNumber}
-                    className="bg-gray-50 p-4 rounded-lg"
+                    className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm"
                   >
-                    <h4 className="font-medium text-gray-700 mb-2">
+                    <h4 className="font-serif text-lg text-slate-800 mb-4">
                       Guest {choice.guestNumber}
                       {choice.guestNumber === 1 ? ` (${guest.name})` : ""}
                     </h4>
@@ -173,11 +173,11 @@ export default function RSVPForm({
                         onChange={(e) =>
                           updateGuestName(choice.guestNumber, e.target.value)
                         }
-                        className="w-full p-2 mb-3 border border-gray-300 rounded focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                        className="w-full p-3 mb-4 border-2 border-stone-200 rounded-xl focus:ring-2 focus:ring-stone-500 focus:border-stone-500 bg-white text-slate-800"
                       />
                     )}
 
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       {(["beef", "fish", "vegetarian"] as const).map((meal) => (
                         <button
                           key={meal}
@@ -185,10 +185,10 @@ export default function RSVPForm({
                           onClick={() =>
                             updateMealChoice(choice.guestNumber, meal)
                           }
-                          className={`p-3 rounded-lg text-sm font-medium transition-colors ${
+                          className={`p-4 rounded-xl text-sm font-medium transition-all duration-300 border-2 ${
                             choice.meal === meal
-                              ? "bg-pink-600 text-white"
-                              : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
+                              ? "bg-black text-white border-black shadow-lg"
+                              : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
                           }`}
                         >
                           {meal === "beef" && "🥩 Beef"}
@@ -203,29 +203,29 @@ export default function RSVPForm({
             </div>
 
             {/* Special Requests */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            <div className="bg-stone-50 rounded-xl p-6">
+              <h3 className="text-xl font-serif text-slate-800 mb-4 text-center">
                 Special Dietary Requirements or Requests
               </h3>
               <textarea
                 value={specialRequests}
                 onChange={(e) => setSpecialRequests(e.target.value)}
                 placeholder="Any allergies, dietary restrictions, or special requests..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent resize-none"
-                rows={3}
+                className="w-full p-4 border-2 border-stone-200 rounded-xl focus:ring-2 focus:ring-stone-500 focus:border-stone-500 bg-white text-slate-800 resize-none"
+                rows={4}
               />
             </div>
           </>
         )}
 
         {/* Submit Button */}
-        <div className="pt-4">
+        <div className="pt-6 text-center">
           <button
             type="submit"
             disabled={attending === null || isSubmitting}
-            className="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-stone-800 text-white py-4 px-12 rounded-full font-serif text-lg hover:bg-stone-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
-            {isSubmitting ? "Saving..." : "Submit RSVP"}
+            {isSubmitting ? "Sending..." : "Send RSVP"}
           </button>
         </div>
       </form>

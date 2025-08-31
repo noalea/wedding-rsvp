@@ -1,5 +1,29 @@
 import { Guest, WeddingDetails } from "@/types";
 
+// Calculate RSVP date (3 weeks prior to wedding date)
+function calculateRSVPDate(weddingDateStr: string): string {
+  try {
+    // Parse the wedding date string (assuming format like "Saturday, October 26, 2024")
+    const weddingDate = new Date(weddingDateStr);
+    console.log("Wedding date:", weddingDate);
+
+    // Subtract 21 days (3 weeks)
+    const rsvpDate = new Date(weddingDate);
+    rsvpDate.setDate(rsvpDate.getDate() - 21);
+
+    // Format as a readable date
+    return rsvpDate.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch (error) {
+    console.error("Error calculating RSVP date:", error);
+    return "Please respond by 3 weeks before the wedding";
+  }
+}
+
 // Get guests from environment variable (private and secure)
 function getGuestsData(): Guest[] {
   try {
@@ -25,12 +49,15 @@ export function getGuestByUrl(uniqueUrl: string): Guest | null {
 }
 
 export function getWeddingDetails(): WeddingDetails {
+  const weddingDate = process.env.DATE ?? "";
+
   return {
     brideName: process.env.BRIDE_NAME ?? "",
     groomName: process.env.GROOM_NAME ?? "",
-    date: process.env.DATE ?? "",
+    date: weddingDate,
     time: process.env.TIME ?? "",
     ceremonyTime: process.env.CEREMONY_TIME ?? "",
+    rsvpDate: calculateRSVPDate(weddingDate),
     venue: {
       name: process.env.VENUE_NAME ?? "",
       address: process.env.VENUE_ADDRESS ?? "",

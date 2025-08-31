@@ -29,6 +29,7 @@ export interface WeddingDetails {
   date: string;
   time: string;
   ceremonyTime: string;
+  rsvpDate: string;
   venue: {
     name: string;
     address: string;
