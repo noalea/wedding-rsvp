@@ -80,7 +80,7 @@ export default function GuestRSVPClient({
       <div className="relative overflow-hidden">
         {/* Elegant Floral Accents - Hero Section */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-16 right-16 text-rose-400 text-2xl opacity-60 animate-pulse">
+          <div className="absolute top-16 right-8 text-rose-400 text-2xl opacity-60 animate-pulse">
             🌸
           </div>
           <div
