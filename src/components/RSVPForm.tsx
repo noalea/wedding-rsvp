@@ -191,9 +191,9 @@ export default function RSVPForm({
                               : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
                           }`}
                         >
-                          {meal === "beef" && "🥩 Beef"}
-                          {meal === "fish" && "🐟 Fish"}
-                          {meal === "vegetarian" && "🥗 Vegetarian"}
+                          {meal === "beef" && "🥩 Beef (Ribeye Steak)"}
+                          {meal === "fish" && "🐟 Fish (Grilled Salmon)"}
+                          {meal === "vegetarian" && "🥗 Vegetarian (Strudel)"}
                         </button>
                       ))}
                     </div>
