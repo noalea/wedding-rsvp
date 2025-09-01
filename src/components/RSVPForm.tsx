@@ -188,7 +188,7 @@ export default function RSVPForm({
                             }
                             className={`p-4 rounded-xl text-sm font-medium transition-all duration-300 border-2 ${
                               choice.meal === meal
-                                ? "bg-gradient-to-r from-stone-800 to-rose-800 text-white border-rose-800 shadow-lg"
+                                ? "bg-gradient-to-r from-rose-900 to-rose-800 text-white border-rose-800 shadow-lg"
                                 : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
                             }`}
                           >
