@@ -93,7 +93,7 @@ export default function AdminPage() {
           <h2 className="text-xl font-bold text-gray-800 mb-4">
             Meal Preferences
           </h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-red-600">
                 {mealCounts.beef || 0}
@@ -111,6 +111,12 @@ export default function AdminPage() {
                 {mealCounts.vegetarian || 0}
               </p>
               <p className="text-gray-600">🥗 Vegetarian</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-orange-600">
+                {mealCounts.kids || 0}
+              </p>
+              <p className="text-gray-600">🧒 Kids Meal</p>
             </div>
           </div>
         </div>
@@ -156,7 +162,12 @@ export default function AdminPage() {
                       {response.mealChoices.map((choice, index) => (
                         <div key={index} className="mb-1">
                           {choice.guestName && `${choice.guestName}: `}
-                          <span className="capitalize">{choice.meal}</span>
+                          <span>
+                            {choice.meal === "beef" && "🥩 Beef"}
+                            {choice.meal === "fish" && "🐟 Fish"}
+                            {choice.meal === "vegetarian" && "🥗 Vegetarian"}
+                            {choice.meal === "kids" && "🧒 Kids Meal"}
+                          </span>
                         </div>
                       ))}
                     </td>

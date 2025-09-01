@@ -57,7 +57,7 @@ export default function RSVPForm({
 
   const updateMealChoice = (
     guestNumber: number,
-    meal: "beef" | "fish" | "vegetarian"
+    meal: "beef" | "fish" | "vegetarian" | "kids"
   ) => {
     setMealChoices((prev) =>
       prev.map((choice) =>
@@ -177,25 +177,28 @@ export default function RSVPForm({
                       />
                     )}
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      {(["beef", "fish", "vegetarian"] as const).map((meal) => (
-                        <button
-                          key={meal}
-                          type="button"
-                          onClick={() =>
-                            updateMealChoice(choice.guestNumber, meal)
-                          }
-                          className={`p-4 rounded-xl text-sm font-medium transition-all duration-300 border-2 ${
-                            choice.meal === meal
-                              ? "bg-gradient-to-r from-rose-900 to-rose-800 text-white border-rose-800 shadow-lg"
-                              : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
-                          }`}
-                        >
-                          {meal === "beef" && "🥩 Beef (Ribeye Steak)"}
-                          {meal === "fish" && "🐟 Fish (Grilled Salmon)"}
-                          {meal === "vegetarian" && "🥗 Vegetarian (Strudel)"}
-                        </button>
-                      ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                      {(["beef", "fish", "vegetarian", "kids"] as const).map(
+                        (meal) => (
+                          <button
+                            key={meal}
+                            type="button"
+                            onClick={() =>
+                              updateMealChoice(choice.guestNumber, meal)
+                            }
+                            className={`p-4 rounded-xl text-sm font-medium transition-all duration-300 border-2 ${
+                              choice.meal === meal
+                                ? "bg-gradient-to-r from-stone-800 to-rose-800 text-white border-rose-800 shadow-lg"
+                                : "bg-white text-slate-700 border-stone-300 hover:border-stone-400 hover:bg-stone-50"
+                            }`}
+                          >
+                            {meal === "beef" && "🥩 Beef (Ribeye Steak)"}
+                            {meal === "fish" && "🐟 Fish (Grilled Salmon)"}
+                            {meal === "vegetarian" && "🥗 Vegetarian (Strudel)"}
+                            {meal === "kids" && "🧒 Kids Meal"}
+                          </button>
+                        )
+                      )}
                     </div>
                   </div>
                 ))}

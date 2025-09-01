@@ -19,7 +19,7 @@ export interface RSVPResponse {
 
 export interface MealChoice {
   guestNumber: number;
-  meal: "beef" | "fish" | "vegetarian";
+  meal: "beef" | "fish" | "vegetarian" | "kids";
   guestName?: string;
 }
 
