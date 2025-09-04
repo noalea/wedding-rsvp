@@ -3,7 +3,6 @@ export interface Guest {
   name: string;
   phoneNumber: string;
   uniqueUrl: string;
-  plusOne: boolean;
   maxGuests: number;
 }
 
