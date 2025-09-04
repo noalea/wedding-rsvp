@@ -65,7 +65,7 @@ export default function GuestRSVPClient({
               special day with you!
             </p>
             <div className="text-sm text-rose-400 italic">
-              If you need to make any changes, please contact us directly.
+              You can return to this page anytime to update your RSVP if needed.
             </div>
           </div>
         </div>
