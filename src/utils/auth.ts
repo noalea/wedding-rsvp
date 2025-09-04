@@ -1,9 +1,9 @@
 import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 
-export function isAuthenticated(): boolean {
+export async function isAuthenticated(): Promise<boolean> {
   try {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const authCookie = cookieStore.get("wedding_auth");
 
     if (!authCookie?.value) {
@@ -30,8 +30,8 @@ export function isAuthenticated(): boolean {
   }
 }
 
-export function requireAuth(): boolean {
-  const authenticated = isAuthenticated();
+export async function requireAuth(): Promise<boolean> {
+  const authenticated = await isAuthenticated();
   if (!authenticated) {
     return false;
   }

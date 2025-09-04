@@ -4,7 +4,7 @@ import ElegantConfetti from "@/components/ElegantConfetti";
 import PasswordProtection from "@/components/PasswordProtection";
 import { isAuthenticated } from "@/utils/auth";
 
-export default function Home() {
+export default async function Home() {
   const guests = getAllGuests();
   const weddingDetails = getWeddingDetails();
   const totalGuestCount = guests.reduce(
@@ -12,7 +12,7 @@ export default function Home() {
     0
   );
 
-  const authenticated = isAuthenticated();
+  const authenticated = await isAuthenticated();
 
   return (
     <PasswordProtection

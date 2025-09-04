@@ -2,8 +2,8 @@ import PasswordProtection from "@/components/PasswordProtection";
 import { isAuthenticated } from "@/utils/auth";
 import AdminClient from "./AdminClient";
 
-export default function AdminPage() {
-  const authenticated = isAuthenticated();
+export default async function AdminPage() {
+  const authenticated = await isAuthenticated();
 
   return (
     <PasswordProtection
