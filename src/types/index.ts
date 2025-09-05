@@ -25,6 +25,8 @@ export interface MealChoice {
 export interface WeddingDetails {
   brideName: string;
   groomName: string;
+  brideParents: string;
+  groomParents: string;
   date: string;
   time: string;
   ceremonyTime: string;

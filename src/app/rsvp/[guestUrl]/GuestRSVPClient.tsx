@@ -132,6 +132,12 @@ export default function GuestRSVPClient({
               </span>
               {weddingDetails.groomName}
             </h1>
+            <div className="text-center text-stone-600 text-sm italic mb-6 leading-relaxed">
+              <div>Son of {weddingDetails.groomParents}</div>
+              <div className="mb-1">
+                Daughter of {weddingDetails.brideParents}
+              </div>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]">
@@ -172,6 +178,12 @@ export default function GuestRSVPClient({
                   </span>
                   {weddingDetails.groomName}
                 </h1>
+                <div className="hidden lg:block text-left text-stone-600 text-sm italic mb-6 leading-relaxed">
+                  <div>Son of {weddingDetails.groomParents}</div>
+                  <div className="mb-1">
+                    Daughter of {weddingDetails.brideParents}
+                  </div>
+                </div>
               </div>
 
               {/* Wedding Details */}

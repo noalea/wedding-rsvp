@@ -53,6 +53,8 @@ export function getWeddingDetails(): WeddingDetails {
   return {
     brideName: process.env.BRIDE_NAME ?? "",
     groomName: process.env.GROOM_NAME ?? "",
+    brideParents: process.env.BRIDE_PARENTS ?? "",
+    groomParents: process.env.GROOM_PARENTS ?? "",
     date: weddingDate,
     time: process.env.TIME ?? "",
     ceremonyTime: process.env.CEREMONY_TIME ?? "",
