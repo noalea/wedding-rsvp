@@ -1,4 +1,4 @@
-# 💒 Wedding Website & RSVP System
+# 💐 Wedding Website & RSVP System
 
 A beautiful, secure wedding website built with Next.js featuring password protection, guest management, and an elegant RSVP system.
 
